@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "15532a69-dde0-490a-95c9-94a93d86a7f3",
+		"name": "Sudoku",
+		"description": "Erick Reyes Sudoku test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nickname\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				},
+				"description": "http://localhost:8080/user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/upload-sudoku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n{ \"y\":0, \"x\":0, \"value\":5 }, { \"y\":0, \"x\":1, \"value\":3 }, { \"y\":0, \"x\":4, \"value\":7 },\n{ \"y\":1, \"x\":0, \"value\":6 }, { \"y\":1, \"x\":3, \"value\":1 }, { \"y\":1, \"x\":4, \"value\":9 }, { \"y\":1, \"x\":5, \"value\":5 },\n{ \"y\":2, \"x\":1, \"value\":9 }, { \"y\":2, \"x\":2, \"value\":8 }, { \"y\":2, \"x\":7, \"value\":6 },\n{ \"y\":3, \"x\":0, \"value\":8 }, { \"y\":3, \"x\":4, \"value\":6 }, { \"y\":3, \"x\":8, \"value\":3 },\n{ \"y\":4, \"x\":0, \"value\":4 }, { \"y\":4, \"x\":3, \"value\":8 }, { \"y\":4, \"x\":5, \"value\":3 }, { \"y\":4, \"x\":8, \"value\":1 },\n{ \"y\":5, \"x\":0, \"value\":7 }, { \"y\":5, \"x\":4, \"value\":2 }, { \"y\":5, \"x\":8, \"value\":6 },\n{ \"y\":6, \"x\":1, \"value\":6 }, { \"y\":6, \"x\":6, \"value\":2 }, { \"y\":6, \"x\":7, \"value\":8 },\n{ \"y\":7, \"x\":3, \"value\":4 }, { \"y\":7, \"x\":4, \"value\":1 }, { \"y\":7, \"x\":5, \"value\":9 }, { \"y\":7, \"x\":8, \"value\":5 },\n{ \"y\":8, \"x\":4, \"value\":8 }, { \"y\":8, \"x\":7, \"value\":7 }, { \"y\":8, \"x\":8, \"value\":9 }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/upload-sudoku",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"upload-sudoku"
+					]
+				},
+				"description": "upload sudoku json"
+			},
+			"response": []
+		},
+		{
+			"name": "get sudoku generic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/get-sudoku",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-sudoku"
+					]
+				},
+				"description": "http://localhost:8080/get-sudoku"
+			},
+			"response": []
+		},
+		{
+			"name": "save result",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"solution\": \"[null,9,null,null,8,3,null,null,null,null,null,null,9,null,null,null,null,7,null,null,8,null,null,null,null,1,null,2,null,null,null,6,4,null,null,null,null,3,null,null,null,null,null,null,null,null,null,null,1,null,2,null,7,null,null,2,null,null,null,null,3,4,null,null,5,null,null,4,null,null,2,null,null,null,null,null,null,6,null,null,1]\",\n\"to_solve\": \"[null,9,null,null,8,3,null,null,null,null,null,null,9,null,null,null,null,7,null,null,8,null,null,null,null,1,null,2,null,null,null,6,4,null,null,null,null,3,null,null,null,null,null,null,null,null,null,null,1,null,2,null,7,null,null,2,null,null,null,null,3,4,null,null,5,null,null,4,null,null,2,null,null,null,null,null,null,6,null,null,1]\",\n\"userId\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sudoku",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sudoku"
+					]
+				},
+				"description": "http://localhost:8080/sudoku"
+			},
+			"response": []
+		},
+		{
+			"name": "get all sudoku",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sudoku",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sudoku"
+					]
+				},
+				"description": "http://localhost:8080/sudoku"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
